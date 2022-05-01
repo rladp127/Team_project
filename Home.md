@@ -1,3 +1,10 @@
-### 팀프로젝트
+### 팀 프로젝트: 그린카 대여 서비스
 
-[collaborator] (https://afsdzvcx123.tistory.com/entry/%EA%B9%83%ED%97%88%EB%B8%8C-GitHub-%EA%B9%83%ED%97%88%EB%B8%8C-Collaborator-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
+## 참여자: 김강현, 김성경
+
+## 역할분담:
+
+- 김강현: C, U 함수 및 대여시간 계산 함수, 차종, 대여시간 검색 함수 구현 및 wiki 작성
+
+- 김성경: R, D 함수 및 파일 입출력 함수, 사용자 이름 검색 함수 구현과 주제 선정
+
