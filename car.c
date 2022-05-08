@@ -45,6 +45,11 @@ int updateInfo(Car *s1){
 }
 
 int deleteInfo(Car *s) {
+    s->rentalTime=-1;
+    s->price=-1;
+    s->rentalType=-1;
+    printf("==> 삭제됨!\n");
+    return 0;
 
 }
 
