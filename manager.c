@@ -5,14 +5,14 @@ void listInfo(Car *slist, int count){
  printf("====================================================\n");
  for(int i =0; i <count ; i++){
      printf("%2d ", i+1);
-     readProduct(slist[i]);
+     readInfo(slist[i]);
      }
  printf("\n");
 }
 
-int selectDataNum(Product *s, int count){
+int selectDataNum(Car *s, int count){
  int num;
- listProduct(s, count);
+ listInfo(s, count);
  printf("번호는 (취소 :0)? ");
  scanf("%d", &num);
  return num;
