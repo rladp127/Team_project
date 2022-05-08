@@ -1,7 +1,7 @@
 #include "manager.h"
 
 void listInfo(Car *slist, int count){
- printf("\nNo\tName\tweight\tprice\tStar Score\tNumber of stars\n");
+ printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
  printf("====================================================\n");
  for(int i =0; i <count ; i++){
      printf("%2d ", i+1);
