@@ -8,7 +8,10 @@ int menu;
  printf("3. 수정\n");
  printf("4. 삭제\n");
  printf("5. 대여 시간 계산\n");
- printf("6. 가격 계산\n");
+ printf("6. 가격 계산\n";
+ printf("7. 이름 검색\n");
+ printf("8. 대여시간 검색\n");
+ printf("9. 차종 검색\n"); 
  printf("0. 종료\n\n");
  printf("=> 원하는 메뉴는? ");
  scanf("%d", &menu);
@@ -80,3 +83,45 @@ void calculatePrice(Car slist){
     printf("총가격은: %d원 입니다.\n",tprice);
 }
 
+void searchByName (Car *slist, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("예약자 이름 검색 : ");
+    scanf("%s", search);
+ 
+    printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
+    printf("====================================================\n");
+    for (int i = 0; i < count; i++){
+        if (slist[i].price == -1) continue;
+        if (strstr(slist[i].name, search)){
+            printf("%2d", i+1);
+            readInfo(slist[i]);
+            scnt++;
+        }
+    }
+    if (scnt == 0) printf("일치하는 이름 없음!");
+    printf("\n");
+}
+
+void searchByModel (Car *slist, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("차종 검색 : ");
+    scanf("%s", search);
+
+    printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
+    printf("====================================================\n");
+    for (int i = 0; i < count; i++){
+        if (slist[i].price == -1) continue;
+        if (strstr(slist[i].carName, search)){
+            printf("%2d", i+1);
+            readInfo(slist[i]);
+            scnt++;
+        }
+    }
+    if (scnt == 0) printf("일치하는 차종 없음!");
+    printf("\n");
+}
+void searchByTime (Car *slist, int count);

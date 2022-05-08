@@ -50,8 +50,17 @@ int main(){
             int no = selectDataNum(slist, index);
             calculatePrice(slist[no-1]);
             continue;
+        } else if (menu==7){
+            searchByName(slist, index);
+            continue;
+        } else if (menu==8){
+            searchByTime(slist, index);
+            continue;
+        } else if (menu==9){
+            searchByModel(slist, index);
+            continue;
         }
         
     }
     return 0;
-}
+ }

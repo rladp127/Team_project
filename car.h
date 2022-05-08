@@ -10,7 +10,7 @@ int rentalTime;
 int price;
 int rentalType;
 } Car;
-
+ 
 int selectMenu(); // 메뉴생성 함수
 int createInfo(Car *slist);
 int updateInfo(Car *slist);
