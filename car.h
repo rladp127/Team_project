@@ -12,10 +12,10 @@ int method;
 } Car;
 
 int selectMenu(); // 메뉴생성 함수
-int createInfo(Car *slist)
-int updateInfo(Car *slist)
-int deleteInfo(Car *slist, int count)
-void readInfo(Car *slist)
+int createInfo(Car *slist);
+int updateInfo(Car *slist);
+int deleteInfo(Car *slist, int count);
+void readInfo(Car *slist);
 void saveData(Car *slist, int count); //제품내용을 파일로 저장하는 함수
 int loadData(Car *slist); // 파일에 저장되있던 내용을 로드하는 함수
 void searchByName l (Car *slist, int count);
