@@ -75,5 +75,8 @@ void calculateTime(){
     printf("~ %d:%s 입니다\n",resHr,tmpMin);    
 }
 
-
+void calculatePrice(Car slist){
+    int tprice=(slist.price)*(slist.rentalTime);
+    printf("총가격은: %d원 입니다.\n",tprice);
+}
 
