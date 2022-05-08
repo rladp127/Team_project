@@ -15,9 +15,7 @@ int selectMenu(); // 메뉴생성 함수
 int createInfo(Car *slist);
 int updateInfo(Car *slist);
 int deleteInfo(Car *s);
-void readInfo(Car * s);
-void saveData(Car slist[], int count); 
-int loadData(Car *slist); 
+void readInfo(Car * s); 
 void searchByName (Car *slist, int count);
 void searchByTime (Car *slist, int count);
 void searchByModel (Car *slist, int count);
