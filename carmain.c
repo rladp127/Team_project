@@ -48,7 +48,7 @@ int main(){
             continue;
         } else if (menu==6){
             int no = selectDataNum(slist, index);
-            calculatePrice(&slist[no-1]);
+            calculatePrice(slist[no-1]);
             continue;
         }
         
