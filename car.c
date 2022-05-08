@@ -38,6 +38,40 @@ int updateProduct(Car *s1){
     return 1;
 }
 
+void calculateTime(){
+    
+    char startTime[20],tmpstTime[20]="";
+    char tmpMin[2]="";
+    char buf[3]={0};
+    int rentalTime;
+    int hr,min,totalMin,resMin,resHr;
+    totalMin=0;
+    printf("대여 시작시각을 입력하세요(ex.16:00)\n");
+    scanf("%s",startTime);
+    strcpy(tmpstTime,startTime);
+    printf("%s\n",tmpstTime);
+    printf("대여 시간을 입력하세요(단위:분)\n");
+    scanf("%d",&rentalTime);
+    char *ptr = strtok(startTime, ":");  
+    hr=atoi(ptr);
+    totalMin+=hr*60;          
+    ptr = strtok(NULL, ":");
+    min=atoi(ptr);
+    totalMin+=min;
+    totalMin+=rentalTime;
+    if(totalMin>=1440){
+        totalMin-=1440;
+    }
+    resHr=totalMin/60;
+    resMin=totalMin%60;
+    itoa(resMin,buf,10);
+    if(resMin<10){
+        strcat(tmpMin,"0");
+    }
+    printf("대여 시간은 %s ",tmpstTime);
+    strcat(tmpMin,buf);
+    printf("~ %d:%s 입니다\n",resHr,tmpMin);    
+}
 
 
 
