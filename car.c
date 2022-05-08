@@ -13,7 +13,7 @@ int menu;
 return menu;
 }
 
-int createInfo(Product *s1){
+int createInfo(Car *s1){
     printf("사용자 이름은? ");
     scanf("%s",s1->productName);
     printf("차 이름은? ");
@@ -26,7 +26,7 @@ int createInfo(Product *s1){
 }
 
 
-int updateProduct(Product *s1){
+int updateProduct(Car *s1){
     printf("사용자 이름은? ");
     scanf("%s",s1->productName);
     printf("차 이름은? ");
