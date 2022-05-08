@@ -7,6 +7,8 @@ int menu;
  printf("2. 추가\n");
  printf("3. 수정\n");
  printf("4. 삭제\n");
+ printf("5. 대여 시간 계산\n");
+ printf("6. 가격 계산\n");
  printf("0. 종료\n\n");
  printf("=> 원하는 메뉴는? ");
  scanf("%d", &menu);
