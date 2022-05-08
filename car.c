@@ -27,6 +27,10 @@ int createInfo(Car *s1){
     return 1;
 }
 
+void readInfo(Car * s) {
+    printf("%-15s %8s %8s %4d분 %4d원 %4d\n",s->name, s->carName, s->location, s->rentalTime, s->price, s->rentalType);
+
+}
 
 int updateInfo(Car *s1){
     printf("사용자 이름은? ");
@@ -38,6 +42,10 @@ int updateInfo(Car *s1){
     printf("대여유형은? (왕복:1, 편도:0)");
     printf("=> 수정됨!");
     return 1;
+}
+
+int deleteInfo(Car *s) {
+
 }
 
 void calculateTime(){
