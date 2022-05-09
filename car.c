@@ -33,7 +33,7 @@ int createInfo(Car *s1){
 }
 
 void readInfo(Car * s) {
-    printf("%13s %14s %20s %10dÏõê %12dÎ∂Ñ %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
+    printf("%13s %14s %20s %10d?õê %12dÎ∂? %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
 
 }
 
@@ -58,7 +58,7 @@ int deleteInfo(Car *s) {
     s->rentalTime=-1;
     s->price=-1;
     s->rentalType=-1;
-    printf("==> ÏÇ≠Ï†úÎê®!\n");
+    printf("==> ªË¡¶µ !\n");
     return 0;
 
 }
@@ -116,7 +116,7 @@ void searchByName (Car *slist, int count){
         if (slist[i].price == -1) continue;
         if (strstr(slist[i].name, search)){
             printf("%2d", i+1);
-            readInfo(slist[i]);
+            readInfo(&slist[i]);
             scnt++;
         }
     }
@@ -137,7 +137,7 @@ void searchByModel (Car *slist, int count){
         if (slist[i].price == -1) continue;
         if (strstr(slist[i].carName, search)){
             printf("%2d", i+1);
-            readInfo(slist[i]);
+            readInfo(&slist[i]);
             scnt++;
         }
     }
