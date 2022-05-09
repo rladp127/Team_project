@@ -5,7 +5,7 @@ void listInfo(Car *slist, int count){
  printf("==================================================================================\n");
  for(int i =0; i <count ; i++){
      printf("%2d ", i+1);
-     readInfo(slist[i]);
+     readInfo(&slist[i]);
      }
  printf("\n");
 }
