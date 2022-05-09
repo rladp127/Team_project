@@ -28,7 +28,7 @@ int createInfo(Car *s1){
 }
 
 void readInfo(Car * s) {
-    printf("%-15s %8s %8s %4d분 %4d원 %4d\n",s->name, s->carName, s->location, s->rentalTime, s->price, s->rentalType);
+    printf("%13s %14s %20s %10d원 %12d분 %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
 
 }
 
