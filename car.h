@@ -14,7 +14,7 @@ int rentalType;
 int selectMenu(); // 메뉴생성 함수
 int createInfo(Car *slist);
 int updateInfo(Car *slist);
-int deleteInfo(Car *slist, int count);
+int deleteInfo(Car *slist);
 void readInfo(Car slist);
 void saveData(Car *slist, int count); 
 int loadData(Car *slist); 

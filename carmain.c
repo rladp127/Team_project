@@ -1,50 +1,49 @@
-#include "car.h"
+#include "manager.h"
 
 int main(){
     Car slist[20];
-    int count = loadData(slist);
+    int count = 0;
     int index = count;
     int menu;
     while (1) {
         menu = selectMenu();
         if (menu == 0) {
-            printf("Ï¢ÖÎ£åÎê®!");
+            printf("¡æ∑·µ !");
             break;
         }
         if (menu == 1) {
-            if (count > 0) 
-                listInfo(slist, index);
-            
+            if (count > 0)
+            listInfo(slist, index);
             continue;
         } else if (menu == 2) {
-            count += createInfo(& slist[index ++]);
+            count += createInfo(&slist[index ++]);
             continue;
         } else if (menu == 3) {
             int no = selectDataNum(slist, index);
             if (no == 0) {
-                printf("=> Ï∑®ÏÜåÎê®!\n");
+                printf("=> √Îº“µ !\n");
                 continue;
             }
-            updateInfo(& slist[no - 1]);
+            updateInfo(&slist[no - 1]);
             continue;
         } else if (menu == 4) {
             int no = selectDataNum(slist, index);
             if (no == 0) {
-                printf("=> Ï∑®ÏÜåÎê®!\n");
+                printf("=> √Îº“µ !\n");
                 continue;
             }
             int deleteok;
-            printf("Ï†ïÎßêÎ°ú ÏÇ≠Ï†úÌïòÏãúÍ≤†ÏäµÎãàÍπå?(ÏÇ≠Ï†ú :1)");
+            printf("¡§∏ª∑Œ ªË¡¶«œΩ√∞⁄Ω¿¥œ±Ó?(ªË¡¶ :1)");
             scanf("%d", & deleteok);
             if (deleteok == 1) {
-                if (deleteInfo(& slist[no - 1])) {
+                /*if (deleteInfo(& slist[no - 1])) {
                     count --;
-                    printf("=> ÏÇ≠Ï†úÎê®!\n ");
-                };
+                    printf("=> ªË¡¶µ !\n ");
+                };*/
                 continue;
             }
         } else if (menu ==5){
-            calsulateTime();
+            calculateTime();
             continue;
         } else if (menu==6){
             int no = selectDataNum(slist, index);
