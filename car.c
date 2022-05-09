@@ -90,3 +90,46 @@ void calculatePrice(Car slist){
     printf("총가격은: %d원 입니다.\n",tprice);
 }
 
+void searchByName (Car *slist, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("");
+    scanf("%s", search);
+ 
+    printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
+    printf("====================================================\n");
+    for (int i = 0; i < count; i++){
+        if (slist[i].price == -1) continue;
+        if (strstr(slist[i].name, search)){
+            printf("%2d", i+1);
+            readInfo(slist[i]);
+            scnt++;
+        }
+    }
+    if (scnt == 0) printf("");
+    printf("\n");
+}
+
+void searchByModel (Car *slist, int count){
+    int scnt = 0;
+    char search[20];
+
+    printf("");
+    scanf("%s", search);
+
+    printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
+    printf("====================================================\n");
+    for (int i = 0; i < count; i++){
+        if (slist[i].price == -1) continue;
+        if (strstr(slist[i].carName, search)){
+            printf("%2d", i+1);
+            readInfo(slist[i]);
+            scnt++;
+        }
+    }
+    if (scnt == 0) printf("");
+    printf("\n");
+}
+void searchByTime (Car *slist, int count);
+
