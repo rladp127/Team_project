@@ -32,6 +32,10 @@ int createInfo(Car *s1){
     return 1;
 }
 
+void readInfo(Car * s) {
+    printf("%13s %14s %20s %10dì› %12dë¶„ %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
+
+}
 
 int updateInfo(Car *s1){
     printf("»ç¿ëÀÚ ÀÌ¸§Àº? ");
@@ -48,6 +52,15 @@ int updateInfo(Car *s1){
     scanf("%d",&s1->rentalTime);
     printf("=> ¼öÁ¤µÊ!");
     return 1;
+}
+
+int deleteInfo(Car *s) {
+    s->rentalTime=-1;
+    s->price=-1;
+    s->rentalType=-1;
+    printf("==> ì‚­ì œë¨!\n");
+    return 0;
+
 }
 
 void calculateTime(){
