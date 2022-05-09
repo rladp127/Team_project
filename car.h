@@ -10,14 +10,14 @@ int rentalTime;
 int price;
 int rentalType;
 } Car;
-
+ 
 int selectMenu(); // 메뉴생성 함수
 int createInfo(Car *slist);
 int updateInfo(Car *slist);
 int deleteInfo(Car *s);
 void readInfo(Car * s); 
 int deleteInfo(Car *slist);
-void readInfo(Car slist);
+void readInfo(Car *slist);
 void saveData(Car *slist, int count); 
 int loadData(Car *slist); 
 void searchByName (Car *slist, int count);

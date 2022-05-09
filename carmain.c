@@ -36,10 +36,10 @@ int main(){
             printf("정말로 삭제하시겠습니까?(삭제 :1)");
             scanf("%d", & deleteok);
             if (deleteok == 1) {
-                /*if (deleteInfo(& slist[no - 1])) {
+                if (deleteInfo(& slist[no - 1])) {
                     count --;
                     printf("=> 삭제됨!\n ");
-                };*/
+                };
                 continue;
             }
         } else if (menu ==5){
@@ -48,6 +48,20 @@ int main(){
         } else if (menu==6){
             int no = selectDataNum(slist, index);
             calculatePrice(slist[no-1]);
+            continue;
+        }
+        else if (menu==6){
+            int no = selectDataNum(slist, index);
+            calculatePrice(slist[no-1]);
+            continue;
+        } else if (menu==7){
+            searchByName(slist, index);
+            continue;
+        } else if (menu==8){
+            //searchByTime(slist, index);
+            continue;
+        } else if (menu==9){
+            searchByModel(slist, index);
             continue;
         }
         

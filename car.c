@@ -9,6 +9,9 @@ int menu;
  printf("4. 삭제\n");
  printf("5. 대여 시간 계산\n");
  printf("6. 가격 계산\n");
+ printf("7. 이름 검색\n");
+ printf("8. 대여시간 검색\n");
+ printf("9. 차종 검색\n"); 
  printf("0. 종료\n\n");
  printf("=> 원하는 메뉴는? ");
  scanf("%d", &menu);
@@ -33,7 +36,7 @@ int createInfo(Car *s1){
 }
 
 void readInfo(Car * s) {
-    printf("%13s %14s %20s %10d?썝 %12d遺? %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
+    printf("%13s %14s %20s %10d원 %12d분 %14d\n",s->name, s->carName, s->location, s->price, s->rentalTime, s->rentalType);
 
 }
 
@@ -74,7 +77,6 @@ void calculateTime(){
     printf("대여 시작시각을 입력하세요(ex.16:00)\n");
     scanf("%s",startTime);
     strcpy(tmpstTime,startTime);
-    printf("%s\n",tmpstTime);
     printf("대여 시간을 입력하세요(단위:분)\n");
     scanf("%d",&rentalTime);
     char *ptr = strtok(startTime, ":");  
@@ -107,7 +109,7 @@ void searchByName (Car *slist, int count){
     int scnt = 0;
     char search[20];
 
-    printf("");
+    printf("찾으시는 사용자 이름을 입력하세요. ");
     scanf("%s", search);
  
     printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
@@ -128,7 +130,7 @@ void searchByModel (Car *slist, int count){
     int scnt = 0;
     char search[20];
 
-    printf("");
+    printf("찾으시는 차종을 입력하세요. ");
     scanf("%s", search);
 
     printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
