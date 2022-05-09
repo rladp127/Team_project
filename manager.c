@@ -4,6 +4,8 @@ void listInfo(Car *slist, int count){
  printf("\nNo\tName\tCar Name\tprice\tRental Time\tRental Type\n");
  printf("====================================================\n");
  for(int i =0; i <count ; i++){
+     if(slist[i].price==-1)
+     continue;
      printf("%2d ", i+1);
      readInfo(&slist[i]);
      }

@@ -24,4 +24,4 @@ void searchByName (Car *slist, int count);
 void searchByTime (Car *slist, int count);
 void searchByModel (Car *slist, int count);
 void calculateTime();
-void calculatePrice(Car slist);
+void calculatePrice(Car *slist);
